@@ -870,6 +870,11 @@ body {
 .button-modal {
   width: 169px;
   height: 56px;
+  cursor: pointer;
+
+  display: inline;
+  justify-content: center;
+  align-items: center;
 
   background-color: var(--iris);
   color: var(--white);
