@@ -66,6 +66,109 @@
             >
           </li>
         </ul>
+
+        <!-- Hamburger Menu Open -->
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-hamburger-open"></use>
+          </svg>
+        </button>
+
+        <!-- Hamburger Menu Close Icon nad Navigations -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle hamburger-close-button js-close-menu">
+            <svg class="menu-icon" width="32" height="32">
+              <use href="./images/icons.svg#icon-hamburger-close"></use>
+            </svg>
+          </button>
+
+          <!-- Mobile Navigation -->
+          <ul class="mob-list list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link current" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="#">Contacts</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Contacts Address -->
+          <ul class="mob-contacts list">
+            <li class="mob-contacts-item">
+              <a class="mob-contacts-tel link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mob-contacts-item">
+              <a class="mob-contacts-mail link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Socials -->
+          <ul class="mob-social-list list">
+            <li class="mob-social-item">
+              <a
+                class="mob-social-link link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-item">
+              <a
+                class="mob-social-link link"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-item">
+              <a
+                class="mob-social-link link"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-item">
+              <a
+                class="mob-social-link link"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="mob-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -150,6 +253,7 @@
           <ul class="what-we-do list">
             <li class="item">
               <img
+                srcset="../images/img-1.jpg 1x, ../images/img-1@2x.jpg 2x"
                 src="images/img-1.jpg"
                 alt="monitor"
                 width="370"
@@ -159,6 +263,7 @@
 
             <li class="item">
               <img
+                srcset="../images/img-2.jpg 1x, ../images/img-2@2x.jpg 2x"
                 src="images/img-2.jpg"
                 alt="mobile phone"
                 width="370"
@@ -168,6 +273,7 @@
 
             <li class="item">
               <img
+                srcset="../images/img-3.jpg 1x, ../images/img-3@2x.jpg 2x"
                 src="images/img-3.jpg"
                 alt="mobile and phone"
                 width="370"
@@ -185,6 +291,10 @@
           <ul class="team list">
             <li class="item">
               <img
+                srcset="
+                  ../images/team-members/mark.jpg    1x,
+                  ../images/team-members/mark@2x.jpg 2x
+                "
                 src="images/team-members/mark.jpg"
                 width="270"
                 height="260"
@@ -246,6 +356,10 @@
 
             <li class="item">
               <img
+                srcset="
+                  ../images/team-members/tom.jpg    1x,
+                  ../images/team-members/tom@2x.jpg 2x
+                "
                 src="images/team-members/tom.jpg"
                 width="270"
                 height="260"
@@ -307,6 +421,10 @@
 
             <li class="item">
               <img
+                srcset="
+                  ../images/team-members/camila.jpg    1x,
+                  ../images/team-members/camila@2x.jpg 2x
+                "
                 src="images/team-members/camila.jpg"
                 width="270"
                 height="260"
@@ -368,6 +486,10 @@
 
             <li class="item">
               <img
+                srcset="
+                  ../images/team-members/daniel.jpg    1x,
+                  ../images/team-members/daniel@2x.jpg 2x
+                "
                 src="images/team-members/daniel.jpg"
                 width="270"
                 height="260"
@@ -492,6 +614,7 @@
             </p>
           </div>
 
+          <!-- Social Media -->
           <div class="footer-block">
             <b class="social-footer">Social media</b>
             <ul class="team-social-list list">
@@ -659,5 +782,8 @@
 
     <!-- MODAL SCRIPT -->
     <script src="./js/modal.js"></script>
+
+    <!-- HAMBURGER MENU SCRIPT -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
