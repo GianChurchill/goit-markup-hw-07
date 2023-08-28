@@ -63,13 +63,13 @@ body {
 }
 
 .container {
-  width: 428px;
+  width: 320px;
   padding: 0 15px;
   margin: 0 auto;
 
-  /* @media screen and (min-width: 428px) {
-    width: 428px;
-  } */
+  @media screen and (min-width: 320px) {
+    width: 320px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -249,10 +249,8 @@ body {
 }
 
 .hero {
-  /* width: 1200px; */
-  padding: 200px 0;
+  padding: 112px 0;
   text-align: center;
-  height: 600px;
 
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -324,14 +322,14 @@ body {
 }
 
 .hero-title {
-  text-align: center;
-  line-height: 1.07;
-  letter-spacing: 0.04em;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0.72px;
   font-weight: 700;
   color: var(--white, #fff);
-  margin-bottom: 30px;
+  margin-bottom: 72px;
 
-  font-size: 36px;
+  text-align: center;
 }
 
 .button {
@@ -350,7 +348,6 @@ body {
 .button.primary {
   background-color: var(--iris, #4d5ae5);
   color: var(--white, #fff);
-  line-height: 1.87;
   letter-spacing: 0.06em;
   padding: 16px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -405,6 +402,9 @@ body {
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0.72px;
+
+    justify-content: left;
+    margin-top: 8px;
   }
 
   @media screen and (min-width: 1158px) {
@@ -423,15 +423,16 @@ body {
   color: var(--slate, #434455);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.71;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+
+  margin-top: 8px;
 }
 
 .benefits {
   display: flex;
   flex-wrap: wrap;
   row-gap: 72px;
-  /* margin-left: -30px;
-  margin-top: -30px; */
 
   @media screen and (min-width: 1158px) {
     gap: 24px;
@@ -440,9 +441,6 @@ body {
 
 .benefits .item {
   width: 100%;
-
-  /* margin-left: 30px;
-  margin-top: 30px; */
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 24px) / 2);
@@ -632,7 +630,7 @@ body {
 
 .substrate {
   background-color: var(--white, #fff);
-  padding: 20px 24px;
+  padding: 32px 16px;
   border: 1px solid #eeeeee;
   border-top: 0;
 }
@@ -726,7 +724,8 @@ body {
   height: 88px;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 60px) / 3);
+    width: 168px;
+    height: 88px;
   }
 
   @media screen and (min-width: 1158px) {
@@ -818,6 +817,10 @@ body {
   flex-direction: column;
   align-items: center;
 
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
+
   @media screen and (min-width: 1158px) {
     margin-left: 120px;
   }
@@ -826,7 +829,7 @@ body {
 .footer-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-block .team-social-list {
@@ -951,7 +954,7 @@ body {
   top: 0%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 584px;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 
@@ -964,7 +967,7 @@ body {
   top: 50%;
   left: 50%;
   border-radius: 4px;
-  min-width: 428px;
+  min-width: 320px;
   height: 100vh;
 
   background-color: var(--white, #fff);
@@ -972,7 +975,7 @@ body {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (min-width: 428px) {
+  @media screen and (min-width: 320px) {
     height: auto;
   }
 }
@@ -1189,7 +1192,7 @@ body {
 .hamburger-container {
   position: relative;
   height: 100vh;
-  /* width: 100%; */
+  width: 100vw;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -1200,14 +1203,20 @@ body {
   }
 }
 
+.hamburger-menu-toggle {
+  border-radius: 50%;
+  border: 1px solid var(--cornflower);
+  padding: 0;
+
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
 .js-close-menu {
   position: absolute;
-  top: 0;
-  right: 15px;
-
-  @media screen and (min-width: 1158px) {
-    display: none;
-  }
+  top: 24;
+  right: 24px;
 }
 
 .menu-icon {
@@ -1222,10 +1231,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  /* width: 100vw; */
+  width: 100vw;
   height: 100vh;
   background-color: var(--white, #fff);
   z-index: 200;
+
+  visibility: hidden;
 
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1233,6 +1244,7 @@ body {
 
 .menu-container.is-open {
   transform: translateX(0);
+  visibility: visible;
 }
 
 /* Mobile Navigation */
@@ -1246,7 +1258,7 @@ body {
 
 .mob-menu-link {
   display: block;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 40px;
   letter-spacing: 0.72px;
@@ -1274,7 +1286,7 @@ body {
   font-size: 36px;
   line-height: 40px;
   letter-spacing: 0.72px;
-  color: var(--slate, #434455);
+  color: var(--iris, #4d5ae5);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
